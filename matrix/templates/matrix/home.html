@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Proper Plotter</title>
+</head>
+<body>
+    {% for material in materials %}
+        {% block content %}
+            {{ material.name }}: {{ material.thermal_conductivity }} (W / m * K) {{ material.density }} g / cm^3 {{ material.elasticity }} Gpa
+        {% endblock content %}
+    {% endfor %}
+</body>
+</html>

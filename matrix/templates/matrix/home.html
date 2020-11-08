@@ -3,12 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Proper Plotter</title>
+    <link href="table.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-    {% for material in materials %}
-        {% block content %}
-            {{ material.name }}: {{ material.thermal_conductivity }} (W / m * K) {{ material.density }} g / cm^3 {{ material.elasticity }} Gpa
-        {% endblock content %}
-    {% endfor %}
+    <table style="text-align:center;">
+        <tr>
+            <th style="background-color: #4CAF50; color: white;">Material</th>
+            <th style="background-color: #4CAF50; color: white;">Thermal Conductivity (W / m * K)</th>
+            <th style="background-color: #4CAF50; color: white;">Density g / cm^3</th>
+            <th style="background-color: #4CAF50; color: white;">Elasticity Gpa</th>
+
+        {% for material in materials %}
+        <tr>
+            <td>{{ material.name }}</td>
+            <td>{{ material.thermal_conductivity }}</td>
+            <td>{{ material.density }}</td>
+            <td>{{ material.elasticity }}</td>
+        </tr>
+        {% endfor %}
+    </table>
 </body>
 </html>

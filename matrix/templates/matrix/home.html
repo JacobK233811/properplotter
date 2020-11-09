@@ -1,17 +1,18 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Proper Plotter</title>
-    <link href="table.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'matrix/main.css' %}">
 </head>
 <body>
-    <table style="text-align:center;">
+    <table>
         <tr>
-            <th style="background-color: #4CAF50; color: white;">Material</th>
-            <th style="background-color: #4CAF50; color: white;">Thermal Conductivity (W / m * K)</th>
-            <th style="background-color: #4CAF50; color: white;">Density g / cm^3</th>
-            <th style="background-color: #4CAF50; color: white;">Elasticity Gpa</th>
+            <th>Material</th>
+            <th>Thermal Conductivity (W / m * K)</th>
+            <th>Density g / cm^3</th>
+            <th>Elasticity Gpa</th>
 
         {% for material in materials %}
         <tr>

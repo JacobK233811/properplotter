@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'matrix/main.css' %}">
 </head>
 <body>
+    <img src="https://image.slidesharecdn.com/greenbuildingmaterials-161012050316/95/green-building-materials-1-638.jpg?cb=1476248685" class="left"/>
     <table>
         <tr>
             <th>Material</th>
@@ -23,5 +24,21 @@
         </tr>
         {% endfor %}
     </table>
+    <table class="right">
+            <tr>
+                <th>Traditional Material</th>
+                <th>Thermal Conductivity (W / m * K)</th>
+                <th>Density g / cm^3</th>
+                <th>Elasticity Gpa</th>
+
+            {% for material in traditional_materials %}
+            <tr>
+                <td>{{ material.name }}</td>
+                <td>{{ material.thermal_conductivity }}</td>
+                <td>{{ material.density }}</td>
+                <td>{{ material.elasticity }}</td>
+            </tr>
+            {% endfor %}
+        </table>
 </body>
 </html>

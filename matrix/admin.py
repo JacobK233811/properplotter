@@ -1,7 +1,8 @@
 from django.contrib import admin
-from .models import Material, TraditionalMaterial
+from .models import NewMaterial, NewAltMaterial, NewTraditionalMaterial
 
 
 # Register your models here.
-admin.site.register(Material)
-admin.site.register(TraditionalMaterial)
+admin.site.register(NewMaterial)
+admin.site.register(NewAltMaterial)
+admin.site.register(NewTraditionalMaterial)

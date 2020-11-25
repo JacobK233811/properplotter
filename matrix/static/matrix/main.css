@@ -4,7 +4,7 @@ th {
 }
 
 table {
-    margin: left;
+    margin: auto;
     text-align: center;
     padding: 20px;
 }
@@ -22,3 +22,4 @@ table {
   border: 3px solid #73AD21;
   padding: 10px;
 }
+

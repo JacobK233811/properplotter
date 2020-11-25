@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Proper Plotter</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'matrix/main.css' %}">
+</head>
+    <body>
+        <table class="left">
+            <tr>
+                <th>Top Alternative Materials</th>
+            </tr>
+            {% for material in new_alt_materials %}
+            <tr>
+                <td>{{ material.name }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <table class="right">
+            <tr>
+                <th>Traditional Materials</th>
+            </tr>
+            {% for material in new_traditional_materials %}
+            <tr>
+                <td>{{ material.name }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <table>
+            <tr>
+                <th>Material</th>
+                <th>Density (g/cm3)</th>
+                <th>UTS (Mpa)</th>
+                <th>Compressive Strength (Mpa)</th>
+                <th>Young's Modulus (Gpa)</th>
+                <th>Fracture Toughness (Mpa.m1/2)</th>
+                <th>Hardness (Knoop)</th>
+
+            {% for material in new_materials %}
+            <tr>
+                <td>{{ material.name }}</td>
+                <td>{{ material.density }}</td>
+                <td>{{ material.uts }}</td>
+                <td>{{ material.compress }}</td>
+                <td>{{ material.youngs }}</td>
+                <td>{{ material.fracture }}</td>
+                <td>{{ material.hardness }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+    <br><br><br><br><br><br>
+    <footer>
+        <h2>Sources</h2>
+        <p>
+            <a href="https://www.researchgate.net/figure/Comparison-of-the-mechanical-properties-of-different-biomaterials-for-implant_tbl1_257721595">
+                https://www.researchgate.net/figure/Comparison-of-the-mechanical-properties-of-different-biomaterials-for-implant_tbl1_257721595
+            </a>
+        </p>
+        <p>
+            <a href="https://www.researchgate.net/figure/Mechanical-properties-of-common-polymers-and-biomaterials-The-values-for-PE-PA-and_tbl2_229176003">
+                https://www.researchgate.net/figure/Mechanical-properties-of-common-polymers-and-biomaterials-The-values-for-PE-PA-and_tbl2_229176003
+            </a>
+        </p>
+        <p>
+            <a href="https://www.researchgate.net/figure/List-of-polymer-biomaterials-and-their-properties_tbl3_234000076">
+                https://www.researchgate.net/figure/List-of-polymer-biomaterials-and-their-properties_tbl3_234000076
+            </a>
+        </p>
+        <p>
+            <a href="https://www.nature.com/articles/418741a#:~:text=Typical%20commercial%20silkworm%20silk%20from,5).">
+                https://www.nature.com/articles/418741a#:~:text=Typical%20commercial%20silkworm%20silk%20from,5).
+            </a>
+        </p>
+    </footer>
+</html>

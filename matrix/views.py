@@ -1,11 +1,12 @@
 from django.shortcuts import render
-from .models import Material, TraditionalMaterial
+from .models import NewMaterial, NewAltMaterial, NewTraditionalMaterial
 
 
 # Create your views here.
 def home(request):
     context = {
-        "materials": Material.objects.all(),
-        "traditional_materials": TraditionalMaterial.objects.all()
+        "new_materials": NewMaterial.objects.all(),
+        "new_alt_materials": NewAltMaterial.objects.all(),
+        "new_traditional_materials": NewTraditionalMaterial.objects.all()
     }
-    return render(request, "matrix/home.html", context)
+    return render(request, "matrix/newhome.html", context)

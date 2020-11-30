@@ -48,7 +48,7 @@ const MaterialTable: React.FC = () => {
   // This would only be useful once we hit a certain data size threshold might be worth to revert back until then
   return (
     <Grid
-      className='rounded overflow-auto border border-gray-400'
+      className='rounded overflow-auto border border-gray-400 mb-3'
       columnCount={COLUMNS.length}
       columnWidth={columnWidth}
       // TODO: Hardcoding this is not a good idea we could use the

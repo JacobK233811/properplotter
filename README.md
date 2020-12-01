@@ -14,3 +14,5 @@ poetry run python runserver
 ```
 
 Your local django server will run on *localhost:8000*.
+
+<img src="homepage.png"/>

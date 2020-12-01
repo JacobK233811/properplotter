@@ -20,4 +20,7 @@ from matrix import views as matrix_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', matrix_views.home),
+    path('new_materials', matrix_views.new_materials),
+    path('new_alt_materials', matrix_views.new_alt_materials),
+    # path('traditional_materials', matrix_views.traditional_materials)
 ]
